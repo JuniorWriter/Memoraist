@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "volleyball";
+    src: url("Resources/Fonts/volleyball.woff") format("woff"),
+         url("Resources/Fonts/volleyball.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  cursor: url("Resources/Cursors/BrainSh.cur"), auto;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(rgb(144, 201, 177), rgb(0, 114, 57));
+}
+
+.page-title {
+  color: rgb(232, 250, 240);
+  font-family: volleyball, serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 4em;
+}
+
+.overlay-text {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(18, 177, 84);
+  font-family: volleyball, serif;
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+  font-size: .1em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 3.5em;
+    }
+  }
