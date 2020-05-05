@@ -1,3 +1,1 @@
-# Memoraist
-
-Si mañana hay clases
+# Memorai
