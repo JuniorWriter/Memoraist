@@ -1,38 +1,46 @@
 class AudioController {
-    constructor() {
+    constructor()
+    {
         this.bgMusic = new Audio('Resources/Audio/Rollinat5.mp3');
-        this.matchSound = new Audio('Resources/Audio/match.wav');
         this.bgMusic.volume = 0.5;
         this.bgMusic.loop = true;
     }
-    startMusic() {
+    startMusic()
+    {
         this.bgMusic.play();
     }
-    stopMusic() {
+    stopMusic()
+    {
         this.bgMusic.pause();
         this.bgMusic.currentTime = 0;
     }
 }
 
-class Memoraist {
-    constructor(_audition) {
+class Memoraist
+{
+    constructor(_audition)
+    {
         this.audioController = new AudioController();
     }
 
-    startGame() {
-        setTimeout(() => {
+    startGame()
+    {
+        setTimeout(() =>
+        {
             this.audioController.startMusic();
         }, 500)
     }
 }
 
-if (document.readyState == 'loading') {
+if (document.readyState == 'loading')
+{
     document.addEventListener('DOMContentLoaded', ready);
 } else {
     ready();
 }
 
-function ready() {
+function ready()
+{
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
     let game = new Memoraist (100, cards);
