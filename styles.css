@@ -4,21 +4,26 @@
          url("Resources/Fonts/volleyball.woff2") format("woff2");
 }
 
-* {
+*
+{
   box-sizing: border-box;
 }
 
-html {
+html
+{
   min-height: 100vh;
   cursor: url("Resources/Cursors/BrainSh.cur"), auto;
+  font-family: volleyball;
 }
 
-body {
-  margin: 0;
+body
+{
+  margin: 0px;
   background: radial-gradient(rgb(144, 201, 177), rgb(0, 114, 57));
 }
 
-.page-title {
+.page-title
+{
   color: rgb(232, 250, 240);
   font-family: volleyball, serif;
   font-weight: normal;
@@ -26,7 +31,31 @@ body {
   font-size: 4em;
 }
 
-.overlay-text {
+.game-info-container
+{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info
+{
+  color: rgb(148, 238, 148);
+  font-size: 2em;
+}
+
+.game-container
+{
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.overlay-text
+{
   top: 0;
   left: 0;
   right: 0;
@@ -42,16 +71,19 @@ body {
   transition: background-color 500ms, font-size 500ms;
 }
 
-.overlay-text-small {
+.overlay-text-small
+{
   font-size: .3em;
 }
 
-.overlay-text.visible {
+.overlay-text.visible
+{
   display: flex;
   animation: overlay-grow 500ms forwards;
 }
 
-@keyframes overlay-grow {
+@keyframes overlay-grow
+{
     from {
       background-color: rgba(0, 0, 0, 0);
       font-size: 0;
@@ -61,3 +93,5 @@ body {
       font-size: 3.5em;
     }
   }
+
+  
