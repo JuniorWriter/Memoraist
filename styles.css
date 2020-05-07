@@ -54,6 +54,78 @@ body
   perspective: 500px;
 }
 
+.card
+{
+  position: relative;
+  cursor: url("Resources/Cursors/Brainlightsh.cur"), auto;
+  height: 175px;
+  width: 125px;
+}
+
+.card-face
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style:solid;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+
+.card-back
+{
+  background-color: rgb(165, 165, 165);
+  border-color: rgb(6, 95, 43);
+}
+
+.corner
+{
+  position: absolute;
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+  width: 47px;
+  height: 47px;
+}
+
+.corner-top-left
+{
+  transform: rotate(270deg);
+  top: 0;
+  left: 0;
+}
+
+.corner-top-right
+{
+  top: 0;
+  right: 0;
+}
+
+.corner-bottom-left
+{
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 0;
+}
+
+.corner-bottom-right
+{
+  transform: rotate(90deg);
+  bottom: 0;
+  right: 0;
+}
+
+.question
+{
+  align-self: flex-start;
+  transition: transform 100ms ease-in-out;
+  transform: translateY(-10px);
+}
+
 .overlay-text
 {
   top: 0;
@@ -94,4 +166,5 @@ body
     }
   }
 
+  
   
