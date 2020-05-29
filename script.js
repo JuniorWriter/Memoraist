@@ -1,5 +1,6 @@
-class AudioController {
-    constructor()
+class AudioController
+{
+    constructor()     
     {
         this.bgMusic = new Audio('Resources/Audio/Rollinat5.mp3');
         this.bgMusic.volume = 0.5;
@@ -16,7 +17,7 @@ class AudioController {
     }
 }
 
-class Memoraist
+class Memorist
 {
     constructor(_audition)
     {
@@ -35,7 +36,9 @@ class Memoraist
 if (document.readyState == 'loading')
 {
     document.addEventListener('DOMContentLoaded', ready);
-} else {
+} 
+else 
+{
     ready();
 }
 
@@ -43,7 +46,7 @@ function ready()
 {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new Memoraist (100, cards);
+    let game = new Memorist (100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
