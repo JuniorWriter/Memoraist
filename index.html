@@ -1,56 +1,314 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Internet Explorer-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Diseños y Funciones-->
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" async></script>
-    <!--Favicon-->
-    <link rel="icon" href="Resources/Favicon/Mentalaist.png">
-
-    <title>Memorist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Internet explorer-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Diseños y Funciones-->
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" async></script>
+  <!--Favicon-->
+  <link rel="icon" href="Resources/Favicon/Mentalaist.png">
+  
+  <title>Memorist</title>
 </head>
 <body>
-    <h1 class="page-title">Memorist</h1>
-    <div class="overlay-text visible">
-      Click para empezar  
-    </div>
-    
-    <div class="game-container">
-      <div class="game-info-container">
-        <div class="game-info">
-          Tiempo <span id="time-remainnig">100</span>
-        </div>
+  <h1 class="page-title">Memorist</h1>
+  <div class="overlay-text visible">
+    Click para empezar
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    HAS PERDIDO
+    <span class="overlay-text-small">Click para reiniciar</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    GANASTE!
+    <span class="overlay-text-small">Click para reiniciar</span>
+  </div>
 
-        <div class="game-info">
-          Giros <span id="flips">0</span>
-        </div>
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Tiempo <span id="time-remaining">100</span>
       </div>
-        <!--No. de cartas 8: 8 front (cara) - 8 back (respaldo)
-        Código para declarar una clase e insertar una imagen:
-        <img class="card-name" src="dirección/imagen.png">-->
-      <div class="card">
-        <!--ESTO ES UNA CARTA-->
-        <div class="card-back card-face">
-          <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
-          <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
-          <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
-          <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
-          <img class="question" src="Resources/Images/Question.png">
-        </div>
-        <div class="card-front card-face">
-          <img class="corner corner-top-left" src="Resources/Images/Corner.png">
-          <img class="corner corner-top-right" src="Resources/Images/Corner.png">
-          <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
-          <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
-          <img class="card-value" src="Resources/Images/1Hand.png">
-        </div>                                    
+      <div class="game-info">
+        Giros <span id="flips">0</span>
       </div>
     </div>
-    
+    <!--ESTO ES UNA CARTA-->
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/1Hand.png">
+      </div>
+    </div>
+    <!--ESTO ES UNA CARTA-->
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/1Hand.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Elevator.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Elevator.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Eyes.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Eyes.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Phone.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Phone.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Soap.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Soap.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Virus.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Virus.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Washing.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Washing.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Shake.png">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="corner corner-top-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-top-right" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/BigCorner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/BigCorner.png">
+        <img class="question" src="Resources/Images/Question.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="corner corner-top-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-top-right" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-left" src="Resources/Images/Corner.png">
+        <img class="corner corner-bottom-right" src="Resources/Images/Corner.png">
+        <img class="card-value" src="Resources/Images/Shake.png">
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
