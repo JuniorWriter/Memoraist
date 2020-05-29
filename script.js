@@ -16,7 +16,7 @@ class AudioController {
     }
 }
 
-class Memoraist
+class Memorist
 {
     constructor(_audition)
     {
@@ -43,7 +43,7 @@ function ready()
 {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new Memoraist (100, cards);
+    let game = new Memorist (100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
