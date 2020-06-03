@@ -1,6 +1,6 @@
 class AudioController
 {
-    constructor()
+     constructor()
     {
         this.gameMusic = new Audio('Resources/Audio/Rollinat5.mp3');
         this.flipSound = new Audio('Resources/Audio/flip.wav');
