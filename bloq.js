@@ -7,7 +7,6 @@ window.onload = function () {
         // "I"
         if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
             disabledEvent(e);
-            alert("Nada de trampas ;)");
         }
         // "J"
         if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
@@ -16,17 +15,14 @@ window.onload = function () {
         // "S" macOS
         if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
             disabledEvent(e);
-            alert("Nada de trampas ;)");
         }
         // "C"
         if (e.ctrlKey && e.keyCode == 67) {
             disabledEvent(e);
-            alert("Nada de trampas ;)");
         }
         // "F12"
         if (event.keyCode == 123) {
             disabledEvent(e);
-            alert("Nada de trampas ;)");
         }
     }, false);
     function disabledEvent(e) {
