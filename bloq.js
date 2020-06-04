@@ -4,26 +4,26 @@ window.onload = function () {
     }, false);
     document.addEventListener("keydown", function (e) {
         //document.onkeydown = function(e) {
-        // "I" key
+        // "I"
         if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
             disabledEvent(e);
             alert("Nada de trampas ;)");
         }
-        // "J" key
+        // "J"
         if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
             disabledEvent(e);
         }
-        // "S" key + macOS
+        // "S" macOS
         if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
             disabledEvent(e);
             alert("Nada de trampas ;)");
         }
-        // "C" key
+        // "C"
         if (e.ctrlKey && e.keyCode == 67) {
             disabledEvent(e);
             alert("Nada de trampas ;)");
         }
-        // "F12" key
+        // "F12"
         if (event.keyCode == 123) {
             disabledEvent(e);
             alert("Nada de trampas ;)");
