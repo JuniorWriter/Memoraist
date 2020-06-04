@@ -168,7 +168,7 @@ body
 
 .card-front
 {
-  background-color: transparent;
+  background-color: radial-gradient(rgb(144, 201, 177), rgb(0, 114, 57));
   border-color: #333;
   transform: rotateY(180deg);
 }
