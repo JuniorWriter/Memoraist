@@ -1,7 +1,6 @@
-//<script type=text/javascript>
+//Bloquear click derecho
   document.oncontextmenu = function(){return false;}
-//Ocultar códgio fuente
-
+//
 class AudioController
 {
     constructor()
