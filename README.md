@@ -1,1 +1,3 @@
-# Memoraist
+# Memorist
+
+Web Game
