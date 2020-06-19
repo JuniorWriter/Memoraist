@@ -193,6 +193,7 @@ footer
   display: none;
   position: fixed;
   justify-content: center;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   color: rgb(18, 177, 84);
@@ -279,4 +280,28 @@ footer
     flex-direction: column;
     align-items: center;
   }
+
+  .page-title
+  {
+    font-size: 2.3em;
+  }
+  .overlay-text
+  {
+    text-align: center;
+  }
+
+  @keyframes overlay-grow
+  {
+    from
+    {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to
+    {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 2em;
+    }
+  }
+
 }
