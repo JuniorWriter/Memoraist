@@ -26,10 +26,9 @@ body
 footer
 {
   margin: 0;
-  justify-content: center;
   background: linear-gradient( rgb(53, 53, 53),black);
   border-width: 2px;
-  border-style: solid;
+  border-top: solid;
   border-color: #333;
   opacity: 85%;
 }
@@ -194,6 +193,7 @@ footer
   display: none;
   position: fixed;
   justify-content: center;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   color: rgb(18, 177, 84);
@@ -280,4 +280,28 @@ footer
     flex-direction: column;
     align-items: center;
   }
+
+  .page-title
+  {
+    font-size: 2.3em;
+  }
+  .overlay-text
+  {
+    text-align: center;
+  }
+
+  @keyframes overlay-grow
+  {
+    from
+    {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to
+    {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 2em;
+    }
+  }
+
 }
