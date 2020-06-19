@@ -26,10 +26,9 @@ body
 footer
 {
   margin: 0;
-  justify-content: center;
   background: linear-gradient( rgb(53, 53, 53),black);
   border-width: 2px;
-  border-style: solid;
+  border-top: solid;
   border-color: #333;
   opacity: 85%;
 }
