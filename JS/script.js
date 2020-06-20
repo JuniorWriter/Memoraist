@@ -10,7 +10,7 @@ class AudioController
         this.matchSound = new Audio('Assets/Audio/match.wav');
         this.victorySound = new Audio('Assets/Audio/victory.wav');
         this.gameOverSound = new Audio('Assets/Audio/gameOver.wav');
-        this.gameMusic.volume = 0.5;
+        this.gameMusic.volume = 0.3;
         this.gameMusic.loop = true;
     }
     startMusic()
@@ -50,7 +50,7 @@ class Memorist
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining')
-        this.timeScreen = document.getElementById('final-time')
+        this.timeScreen = document.getElementById('final-points')
         this.counter = document.getElementById('flips');
         this.audioController = new AudioController();
     }

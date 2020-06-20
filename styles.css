@@ -25,7 +25,6 @@ body
 
 footer
 {
-  margin: 0;
   background: linear-gradient( rgb(53, 53, 53),black);
   border-width: 2px;
   border-top: solid;
@@ -44,25 +43,27 @@ footer
 
 .game-info-container
 {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
+  margin: 60px auto;
+  display: block;
+  text-align: center;
 }
 
 .game-info
 {
+  display: inline-block;
   color: rgb(164, 245, 164);
   font-size: 1.5em;
+  padding:0 2em;
 }
 
-.game-container
+.cards-container
 {
   margin: 60px auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 25px;
   justify-content: center;
-  perspective: 500px;
+  perspective: 500px; 
 }
 
 .card
@@ -270,9 +271,9 @@ footer
 
 @media (max-width: 600px)
 {
-  .game-container
+  .cards-container
   {
-    grid-template-columns: repeat(2, auto)
+    grid-template-columns: repeat(2, auto) 
   }
 
   .game-info-container
@@ -280,10 +281,16 @@ footer
     flex-direction: column;
     align-items: center;
   }
+  
+  .game-info
+  {
+    padding: 0;
+    font-size: 1em;
+  }
 
   .page-title
   {
-    font-size: 2.3em;
+    font-size: 2.4em;
   }
   .overlay-text
   {
